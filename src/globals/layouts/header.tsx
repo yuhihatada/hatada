@@ -54,6 +54,10 @@ const Header = () => {
 const styles = {
   container: css`
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: #fff; */
   `,
   wrapper: css`
     width: 80%;

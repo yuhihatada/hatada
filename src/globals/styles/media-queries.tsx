@@ -5,7 +5,7 @@ export const breakpoints = {
 } as const;
 
 export const mqMin = (key: keyof typeof breakpoints) =>
-  `@media (min-width: ${breakpoints[key]}px)`;
+  `@media (min-width: ${breakpoints[key] + 1}px)`;
 
 export const mqMax = (key: keyof typeof breakpoints) =>
-  `@media (max-width: ${breakpoints[key] - 1}px)`;
+  `@media (max-width: ${breakpoints[key]}px)`;
