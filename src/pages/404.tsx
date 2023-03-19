@@ -6,7 +6,7 @@ import MainLayout from '../globals/layouts/main-layout';
 const NotFound = () => {
   const [typedText, setTypedText] = useState<string>('');
   const [counter, setCounter] = useState<number>(0);
-  const errorMessage = '404 Not Found.';
+  const errorMessage = 'This page is not yet developed.';
 
   useEffect(() => {
     const typing = async () => {
