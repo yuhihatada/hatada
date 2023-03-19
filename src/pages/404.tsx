@@ -6,12 +6,12 @@ import MainLayout from '../globals/layouts/main-layout';
 const NotFound = () => {
   const [typedText, setTypedText] = useState<string>('');
   const [counter, setCounter] = useState<number>(0);
-  const errorMessage = 'This page is not yet developed.';
+  const errorMessage = 'This page is not yet created.';
 
   useEffect(() => {
     const typing = async () => {
       if (counter >= 0 && counter <= errorMessage.length) {
-        await new Promise(r => setTimeout(r, 80));
+        await new Promise(r => setTimeout(r, 50));
         setTypedText(errorMessage.slice(0, typedText.length + 1));
       } else {
         return;
