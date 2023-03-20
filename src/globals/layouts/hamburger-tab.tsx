@@ -54,7 +54,7 @@ const HamburgerTab = (props: {
             href='https://www.instagram.com/yuhi_hatada/'
             target='_blank'
           >
-            <IconContext.Provider value={{ size: '35px' }}>
+            <IconContext.Provider value={{ size: '50px' }}>
               <AiFillInstagram />
             </IconContext.Provider>
           </Link>
@@ -63,7 +63,7 @@ const HamburgerTab = (props: {
             href='https://twitter.com/yuhi00767535'
             target='_blank'
           >
-            <IconContext.Provider value={{ size: '35px' }}>
+            <IconContext.Provider value={{ size: '50px' }}>
               <FaTwitter />
             </IconContext.Provider>
           </Link>
@@ -99,15 +99,15 @@ const styles = {
     text-align: right;
   `,
   links: css`
-    width: 80px;
-    margin: 50px auto 0;
+    margin-top: 50px;
+    text-align: center;
     display: flex;
     flex-flow: column;
   `,
   menuText: css`
     margin: 7px 0;
     color: #2c3e50;
-    font-size: 20px;
+    font-size: 30px;
     text-decoration: none;
     transition: color 0.2s linear;
     &:hover {
@@ -116,11 +116,13 @@ const styles = {
     }
   `,
   snsIcons: css`
-    width: 100px;
-    margin: 15px auto 0;
+    width: 120px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   `,
   snsIcon: css`
-    margin: 0 7px;
     color: #2c3e50;
     transition: opacity 0.2s linear;
     &:hover {
