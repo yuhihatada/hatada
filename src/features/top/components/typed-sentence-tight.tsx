@@ -29,6 +29,7 @@ const styles = {
   typedText: css`
     width: 90%;
     margin: 30px auto;
+    font-size: 17px;
     text-align: left;
     color: #2c3e50;
     ${mqMin('md')} {

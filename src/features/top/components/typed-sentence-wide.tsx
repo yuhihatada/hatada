@@ -29,6 +29,7 @@ const styles = {
   typedText: css`
     width: 100%;
     margin: 0;
+    font-size: 17px;
     text-align: left;
     color: #2c3e50;
     ${mqMax('md')} {
