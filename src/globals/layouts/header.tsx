@@ -70,6 +70,7 @@ const styles = {
     top: 0;
     left: 0;
     background-color: #fff;
+    z-index: 1;
   `,
   wrapper: css`
     width: 100%;
