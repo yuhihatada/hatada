@@ -7,7 +7,7 @@ const Skills = () => {
       <h1 css={styles.skillsTitle}>Skills</h1>
       <div css={styles.skillsWrapper}>
         <div css={[styles.skillBox, 'margin-bottom: 10px;']}>
-          <a css={styles.skillDesc}>Programming</a>
+          <h2 css={styles.skillDescTitle}>Programming</h2>
           <div css={styles.youtubeVideoWrapper}>
             <iframe
               css={styles.youtubeVideo}
@@ -18,26 +18,31 @@ const Skills = () => {
           </div>
         </div>
         <div css={[styles.skillBox, 'margin-bottom: 10px;']}>
-          <a css={styles.skillDesc}>3D Animation</a>
+          <div css={styles.skillDescBox}>
+            <h2 css={styles.skillDescTitle}>3D Animation</h2>
+            <a css={styles.skillDesc}>
+              3Dオブジェクトとアニメーションを作成することが出来ます。
+              これまでに10本程度のアニメーション動画を作成してきました。
+              オーダーメイドでアニメーションを作成することも可能です。
+            </a>
+          </div>
           <div css={styles.youtubeVideoWrapper}>
-            <iframe
-              css={styles.youtubeVideo}
-              src='https://www.youtube.com/embed/m6f9ArBEtkU'
-              title='3D Animation'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-            />
+            <video css={styles.youtubeVideo} autoPlay loop muted>
+              <source src='/videos/logo_rotate.mp4' type='video/mp4' />
+              <p>動画を使用できるブラウザで閲覧して下さい。</p>
+            </video>
           </div>
         </div>
         <div css={styles.skillBox}>
-          <a css={styles.skillDesc}>Body Building</a>
-          <div css={styles.youtubeVideoWrapper}>
-            <iframe
-              css={styles.youtubeVideo}
-              src='https://www.youtube.com/embed/m6f9ArBEtkU'
-              title='Body Building'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-            />
+          <div css={styles.skillDescBox}>
+            <h2 css={styles.skillDescTitle}>Body Building</h2>
+            <a css={styles.skillDesc}>
+              これはもはやスキルなのか分かりません。
+              ですが、筋力トレーニングには18歳の頃から向き合い、栄養学や解剖学も勉強してきました。
+              筋肥大の方法や減量方法について気になる方はぜひご相談ください。
+            </a>
           </div>
+          <img src='/images/contest.jpg' alt='' css={styles.imageWrapper} />
         </div>
       </div>
     </div>
@@ -67,8 +72,19 @@ const styles = {
       align-items: center;
     }
   `,
-  skillDesc: css`
+  skillDescBox: css`
+    width: 100%;
+    ${mqMin('md')} {
+      width: 50%;
+    }
+  `,
+  skillDescTitle: css`
     font-size: 20px;
+    color: #2c3e50;
+  `,
+  skillDesc: css`
+    font-size: 17px;
+    color: #2c3e50;
   `,
   youtubeVideoWrapper: css`
     position: relative;
@@ -76,7 +92,7 @@ const styles = {
     padding-top: 56.25%;
     ${mqMin('md')} {
       width: 50%;
-      padding-top: 28%;
+      padding-top: 28.125%;
     }
   `,
   youtubeVideo: css`
@@ -86,6 +102,14 @@ const styles = {
     width: 100%;
     height: 100%;
     z-index: 0;
+    border-radius: 7px;
+  `,
+  imageWrapper: css`
+    width: 100%;
+    border-radius: 7px;
+    ${mqMin('md')} {
+      width: 50%;
+    }
   `,
 };
 
