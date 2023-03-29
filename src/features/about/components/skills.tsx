@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import Link from 'next/link';
 import { mqMin } from '../../../globals/styles/media-queries';
 
 const Skills = () => {
@@ -7,27 +8,40 @@ const Skills = () => {
       <h1 css={styles.skillsTitle}>Skills</h1>
       <div css={styles.skillsWrapper}>
         <div css={[styles.skillBox, 'margin-bottom: 10px;']}>
-          <h2 css={styles.skillDescTitle}>Programming</h2>
-          <div css={styles.youtubeVideoWrapper}>
-            <iframe
-              css={styles.youtubeVideo}
-              src='https://www.youtube.com/embed/m6f9ArBEtkU'
-              title='Programming'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-            />
+          <div css={styles.skillDescBox}>
+            <h2 css={styles.skillDescTitle}>Programming</h2>
+            <a css={styles.skillDesc}>
+              情報工学科卒、仕事でもゴリゴリコードを書いています。
+              <br />
+              技術スタックはgolang, python, C, C#, Java, js, ts, swift, aws,
+              docker, pos等です。 日々新しい技術に触れることが好きです。
+              <br />
+              GitHubは
+            </a>
+            <Link href='https://github.com/yuhihatada' target='_blank'>
+              こちら
+            </Link>
+            <a>。</a>
           </div>
+          <img
+            src='/images/repositories.png'
+            alt=''
+            css={styles.imageWrapper}
+          />
         </div>
         <div css={[styles.skillBox, 'margin-bottom: 10px;']}>
           <div css={styles.skillDescBox}>
             <h2 css={styles.skillDescTitle}>3D Animation</h2>
             <a css={styles.skillDesc}>
               3Dオブジェクトとアニメーションを作成することが出来ます。
+              <br />
               これまでに10本程度のアニメーション動画を作成してきました。
+              <br />
               オーダーメイドでアニメーションを作成することも可能です。
             </a>
           </div>
-          <div css={styles.youtubeVideoWrapper}>
-            <video css={styles.youtubeVideo} autoPlay loop muted>
+          <div css={styles.videoWrapper}>
+            <video css={styles.video} autoPlay loop muted>
               <source src='/videos/logo_rotate.mp4' type='video/mp4' />
               <p>動画を使用できるブラウザで閲覧して下さい。</p>
             </video>
@@ -38,8 +52,10 @@ const Skills = () => {
             <h2 css={styles.skillDescTitle}>Body Building</h2>
             <a css={styles.skillDesc}>
               これはもはやスキルなのか分かりません。
-              ですが、筋力トレーニングには18歳の頃から向き合い、栄養学や解剖学も勉強してきました。
-              筋肥大の方法や減量方法について気になる方はぜひご相談ください。
+              <br />
+              筋力トレーニングには18歳の頃から向き合い、栄養学や解剖学も勉強してきました。
+              <br />
+              筋トレに興味ある方は、ぜひ私と一緒にマッチョになりましょう。
             </a>
           </div>
           <img src='/images/contest.jpg' alt='' css={styles.imageWrapper} />
@@ -86,7 +102,7 @@ const styles = {
     font-size: 17px;
     color: #2c3e50;
   `,
-  youtubeVideoWrapper: css`
+  videoWrapper: css`
     position: relative;
     width: 100%;
     padding-top: 56.25%;
@@ -95,7 +111,7 @@ const styles = {
       padding-top: 28.125%;
     }
   `,
-  youtubeVideo: css`
+  video: css`
     position: absolute;
     top: 0;
     right: 0;
