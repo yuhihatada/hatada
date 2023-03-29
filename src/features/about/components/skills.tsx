@@ -16,12 +16,11 @@ const Skills = () => {
               技術スタックはgolang, python, C, C#, Java, js, ts, swift, aws,
               docker, pos等です。 日々新しい技術に触れることが好きです。
               <br />
-              GitHubは
+              このポートフォリオサイトもオープンソースなのでぜひ見てみてください。
             </a>
-            <Link href='https://github.com/yuhihatada' target='_blank'>
-              こちら
+            <Link href='https://github.com/yuhihatada/hatada' target='_blank'>
+              ソースコード
             </Link>
-            <a>。</a>
           </div>
           <img
             src='/images/repositories.png'
