@@ -27,7 +27,7 @@ const Career = () => {
               </td>
             </tr>
             <tr css={styles.tableBodyLine}>
-              <td css={styles.tableBodyCell}>Mynavi Corporation.</td>
+              <td css={styles.tableBodyCell}>employment agency</td>
               <td css={styles.tableBodyCell}>2023 ~ current</td>
               <td css={styles.tableBodyCell}>New Business Development</td>
             </tr>
